@@ -1,0 +1,153 @@
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.button {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+td {
+    vertical-align: top;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h3, h2 {
+    text-align: center;
+    color: #4CAF50;
+}
+
+.attempts-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.attempts-table th, .attempts-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.attempts-table th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.form-error {
+    color: red;
+    margin-top: 5px;
+}
+
+.flash {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.flash.error {
+    background-color: #f44336;
+    color: white;
+}
+
+.flash.success {
+    background-color: #4CAF50;
+    color: white;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+input[type="submit"], .button {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 0px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover, .button:hover {
+    background-color: #45a049;
+}
+
+.alert {
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 4px;
+}
+
+.alert.alert-error {
+    background-color: #f44336;
+    color: white;
+}
+
+.alert.alert-success {
+    background-color: #4CAF50;
+    color: white;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.fade-out {
+    animation: fadeOut 1s forwards;
+}

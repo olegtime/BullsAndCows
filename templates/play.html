@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block upper %}
+    <h2>Игра "Быки и Коровы"</h2>
+{% endblock %}
+
+{% block content %}
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+            <div class="flash {{ category }}">{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+
+    {% if win %}
+        <p>Вы угадали число за {{ attempts | length }} попыток</p>
+        <a href="/" class="button">Сыграть еще раз</a>
+    {% else %}
+        <form action="{{ url_for('play') }}" method="post">
+            {{ form.csrf_token() }}
+            {{ form.attempt.label }}
+            {{ form.attempt }}
+            {% for error in form.attempt.errors %}
+                {{ error }}
+            {% endfor %}
+            {{ form.check }}
+        </form>
+    {% endif %}
+
+    <a href="/" class="button">В главное меню</a>
+
+    <table class="attempts-table">
+        <thead>
+            <tr>
+                <th>Число</th>
+                <th>Быки</th>
+                <th>Коровы</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for attempt in attempts %}
+                <tr>
+                    <td>{{ attempt[0] }}</td>
+                    <td>{{ attempt[1][0] }}</td>
+                    <td>{{ attempt[1][1] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

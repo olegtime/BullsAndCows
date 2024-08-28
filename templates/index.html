@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block upper %}
+    <h2>Игра "Быки и Коровы"</h2>
+{% endblock %}
+
+{% block content %}
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+            <div class="flash {{ category }}">{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+    <form action="" method="post">
+        {{ form.csrf_token() }}
+        {{ form.size.label }}
+        {{ form.size }}
+        {% for error in form.size.errors %}
+            {{ error }}
+        {% endfor %}
+        {{ form.play }}
+    </form>
+
+    <a href="/rules" class="button">Правила</a>
+{% endblock %}
