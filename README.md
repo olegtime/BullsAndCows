@@ -21,7 +21,7 @@
 
 1. Скачайте или клонируйте репозиторий:
    ```bash
-   git clone https://github.com/your_username/bulls_and_cows.git
+   git clone https://github.com/olegtime/BullsAndCows.git
    cd bulls_and_cows
 2. Установите необходимые зависимости:
     ```bash
